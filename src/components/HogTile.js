@@ -10,7 +10,9 @@ function HogTile( {name, specialty, greased, weight, image, medalRating, medalCo
 
     return (
         <div className="fluid card" onClick={handleToggle}>
-          <img className="ui image" src={image} />
+        <div style={{ width: '100%', paddingTop: '100%', position: 'relative', overflow: 'hidden' }}>
+          <img className="ui image" src={image} alt="Your Image" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover'}} />
+        </div>
           <div className="left aligned content">
             <h3 className="header">{name}</h3>
             {isExpanded ? (
